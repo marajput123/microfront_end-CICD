@@ -4,5 +4,5 @@ import MarketingComponent from './components/MarketingComponent';
 
 ReactDOM.render(
   <MarketingComponent/>,
-  document.querySelector("#root")
+  document.querySelector('#root')
 )
