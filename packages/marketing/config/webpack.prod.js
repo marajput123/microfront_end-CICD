@@ -5,7 +5,7 @@ const commonConfig = require("./webpack.common")
 const prodConfig = {
   mode: 'production',
   output: {
-    filename: '[name].[hashcontent].js'
+    filename: '[name].[contenthash].js'
   },
   plugins:[
     new ModuleFederationPlugin({
