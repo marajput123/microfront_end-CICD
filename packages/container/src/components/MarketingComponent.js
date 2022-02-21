@@ -7,7 +7,7 @@ const MarketingComponent = () => {
   useEffect(() => {
     mount(rootDiv.current)
   });
-  console.log('here')
+  console.log('hr')
 
   return (
     <div ref={rootDiv}></div>
