@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        run: actions@checkout@v2
+        run: actions/checkout@v2
       
       - name: Install packages
         run: npm install
