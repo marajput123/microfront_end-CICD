@@ -1,10 +1,10 @@
-name: Microfrontend automation
+name: Microfrontend automation - Container
 
 
 on:
   # When this actions occurs
   push:
-    # On specific branch branch
+    # On specific branch 
     branch:
       # In summary: Run this workflow when a push is made to master 
       - master
