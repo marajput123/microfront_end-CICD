@@ -1,0 +1,7 @@
+name: Microfrontend automation
+on: [push]
+jobs:
+  Explore-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo- hello world"
