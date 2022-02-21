@@ -1,0 +1,29 @@
+name: Microfrontend automation
+
+
+on:
+  # When this actions occurs
+  push:
+    # On specific branch branch
+    branch:
+      # In summary: Run this workflow when a push is made to master 
+      - master
+    # When these paths are changed
+    paths:
+      # In summary: Run this workflow when changes are made in this directory
+      - "packages/container/**"
+
+defaults:
+  run:
+    working-directory: "packages/container"
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npm run build 
+      - run: echo "build successfull!"
