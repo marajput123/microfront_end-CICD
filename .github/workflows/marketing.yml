@@ -11,7 +11,7 @@ on:
 
 defaults:
   run:
-    workingdirectory: "packages/marketing"
+    working-directory: "packages/marketing"
   
 jobs:
   build:
