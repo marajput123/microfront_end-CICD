@@ -8,7 +8,8 @@ const CDN_DOMAIN = process.env.PRODUCTION_DOMAIN;
 const prodConfig = {
   mode: 'production',
   output: {
-    filename: '[name].[contenthash].js'
+    filename: '[name].[contenthash].js',
+    publicPath: "/container/"
   },
   plugins: [
     new ModuleFederationPlugin({
