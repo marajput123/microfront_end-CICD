@@ -3,7 +3,9 @@ name: Microfrontend automation - Container
 
 on:
   # When this actions occurs
-  push:
+  pull_request:
+    types:
+      - opened
     # On specific branch 
     branch:
       # In summary: Run this workflow when a push is made to master 
