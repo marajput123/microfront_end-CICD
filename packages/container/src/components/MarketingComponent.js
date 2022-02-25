@@ -7,7 +7,7 @@ const MarketingComponent = () => {
   useEffect(() => {
     mount(rootDiv.current)
   });
-  console.log('hr')
+  console.log('No Title changes!!')
 
   return (
     <div ref={rootDiv}></div>
