@@ -5,7 +5,7 @@ on:
   # When this actions occurs
   push:
     # On specific branch 
-    branch:
+    branches:
       # In summary: Run this workflow when a push is made to master 
       - master
     # When these paths are changed
