@@ -15,7 +15,7 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes:{
-        marketing: `marketing@${CDN_DOMAIN}/marketing/remoteEntry.js`
+        marketing: `marketing@/marketing/remoteEntry.js`
       },
       shared: { 'react': { singleton: true }, 'react-dom': { singleton: true } },
     })

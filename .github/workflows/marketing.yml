@@ -1,7 +1,5 @@
 name: Microfrontend Automation - Marketing
 
-
-
 on:
   push:
     branch:
@@ -33,6 +31,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY}}
           aws-region: us-east-1
       
+      - name: Invalidate AWS path
+        uses: chetan/invalidate-cloudfront-action@v2
+        env: 
+          DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+          PATHS: "/marketing/remoteEntry.js"
+          AWS_REGION: "us-east-1"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }} 
 
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./dist s3://microfrontendapp/marketing --delete
