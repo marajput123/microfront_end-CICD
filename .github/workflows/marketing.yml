@@ -41,4 +41,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }} 
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync ./dist s3://microfrontendapp/marketing --delete
+        run: aws s3 sync ./dist s3://microfrontendapp/marketing/latest --delete
